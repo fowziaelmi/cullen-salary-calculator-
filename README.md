@@ -21,14 +21,14 @@ Goal:
 Steps
 
 \*\* Add and track employee information
-[ ] Create form to accept employee information that takes the following input:
+[x] Create form to accept employee information that takes the following input:
 i. First Name
 ii. Last Name
 iii. Employee ID
 iv. Employee role
 v. Employee monthly salary
 
-[ ] Button to submit the form
+[x] Button to submit the form
 
 [ ] Render all the employee information
 
