@@ -30,7 +30,8 @@ v. Employee monthly salary
 
 [x] Button to submit the form
 
-[ ] Render all the employee information
+- Store the input into an array.
+  [X] Render all the employee information
 
 [ ] Add a delete button to delete each employee information onto the DOM
 

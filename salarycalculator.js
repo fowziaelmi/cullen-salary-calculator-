@@ -34,4 +34,24 @@ function onAddItem() {
   //push each item into an array
 
   employeeData.push(item);
+  displayInDom();
+}
+
+function displayInDom() {
+  console.log('in display');
+
+  let el = $('#employeeDataTable');
+  el.empty();
+
+  for (let info of employeeData) {
+    el.append(`<tr> 
+    <td>${info.firstName} </td>
+    <td>${info.lastName} </td>
+    <td>${info.employeeId} </td>
+    <td>${info.role} </td>
+    <td> ${info.monthlySalary}</td>
+    
+    
+    </tr>`);
+  }
 }
