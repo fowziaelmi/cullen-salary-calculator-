@@ -69,6 +69,12 @@ function sumMonthlyCost(anArray) {
   let up = $('#totalCost');
   up.empty(total);
   up.append(total);
+
+  if (total > 20000) {
+    $('#exceeds').css('background-color', 'red');
+  } else {
+    console.log('we are good');
+  }
 }
 
 function displayInDom() {
