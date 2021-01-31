@@ -29,6 +29,7 @@ iv. Employee role
 v. Employee monthly salary
 
 [x] Button to submit the form
+[x] Clear input fields
 
 - Store the input into an array.
   [X] Render all the employee information

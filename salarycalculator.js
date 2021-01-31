@@ -7,6 +7,12 @@ let employeeData = [];
 // When submit button is pressed, it will take the input.
 //Store input into an array
 $(document).on('click', '#addItemButton', onAddItem);
+$(document).on('click', '#deleteBtn', onDeleteItem);
+
+// Create a function that deletes the employee information when delete button is clicked
+function onDeleteItem() {
+  console.log('in delete item');
+}
 
 function onAddItem() {
   console.log('in add item');
@@ -34,6 +40,11 @@ function onAddItem() {
   //push each item into an array
 
   employeeData.push(item);
+  $('#firstNameInput').val('');
+  $('#lastNameInput').val('');
+  $('#idInput').val('');
+  $('#roleInput').val('');
+  $('#monthlySalaryInput').val('');
   displayInDom();
 }
 
@@ -50,6 +61,7 @@ function displayInDom() {
     <td>${info.employeeId} </td>
     <td>${info.role} </td>
     <td> ${info.monthlySalary}</td>
+    <td> <button id="deleteBtn"> Delete </button> </td>
     
     
     </tr>`);
