@@ -29,10 +29,11 @@ iv. Employee role
 v. Employee monthly salary
 
 [x] Button to submit the form
-[x] Clear input fields
+[x] Clear input field
 
 - Store the input into an array.
   [X] Render all the employee information
+  [ ] Calculate total monthly cost and append it to the DOM
 
 [ ] Add a delete button to delete each employee information onto the DOM
 

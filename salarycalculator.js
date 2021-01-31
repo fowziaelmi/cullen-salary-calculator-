@@ -4,6 +4,7 @@ function onReady() {
   console.log('im ready');
 }
 let employeeData = [];
+
 // When submit button is pressed, it will take the input.
 //Store input into an array
 $(document).on('click', '#addItemButton', onAddItem);
@@ -12,6 +13,13 @@ $(document).on('click', '#deleteBtn', onDeleteItem);
 // Create a function that deletes the employee information when delete button is clicked
 function onDeleteItem() {
   console.log('in delete item');
+
+  for (i in employeeData) {
+    if (employeeData[i].employeeId === Number(this.value)) {
+      employeeData.splice(i, 1);
+      $(this).closest(`tr`).empty();
+    }
+  }
 }
 
 function onAddItem() {
@@ -22,17 +30,17 @@ function onAddItem() {
 
   let firstName = $('#firstNameInput').val();
   let lastName = $('#lastNameInput').val();
-  let employeeId = $('#idInput').val();
+  let employeeId = Number($('#idInput').val());
   let role = $('#roleInput').val();
-  let monthlySalary = $('#monthlySalaryInput').val();
+  let monthlySalary = Number($('#monthlySalaryInput').val());
 
   // create an item object
   let item = {
     firstName: firstName,
     lastName: lastName,
-    employeeId: Number(employeeId),
+    employeeId: employeeId,
     role: role,
-    monthlySalary: Number(monthlySalary),
+    monthlySalary: monthlySalary,
   };
 
   console.log('got and item', item);
@@ -46,6 +54,21 @@ function onAddItem() {
   $('#roleInput').val('');
   $('#monthlySalaryInput').val('');
   displayInDom();
+  sumMonthlyCost(employeeData);
+}
+
+//Calculate total monthly salary of all employees
+let totalSalary = 0;
+function sumMonthlyCost(anArray) {
+  console.log('in monthly cost');
+  let total = 0;
+  for (let i = 0; i < anArray.length; i++) {
+    total = total += anArray[i].monthlySalary / 12;
+  }
+  console.log(total);
+  let up = $('#totalCost');
+  up.empty(total);
+  up.append(total);
 }
 
 function displayInDom() {
@@ -54,14 +77,14 @@ function displayInDom() {
   let el = $('#employeeDataTable');
   el.empty();
 
-  for (let info of employeeData) {
+  for (info of employeeData) {
     el.append(`<tr> 
     <td>${info.firstName} </td>
     <td>${info.lastName} </td>
     <td>${info.employeeId} </td>
     <td>${info.role} </td>
     <td> ${info.monthlySalary}</td>
-    <td> <button id="deleteBtn"> Delete </button> </td>
+    <td> <button id="deleteBtn" value="${info.employeeId}"> Delete </button> </td>
     
     
     </tr>`);
