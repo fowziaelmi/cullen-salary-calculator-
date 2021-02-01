@@ -42,9 +42,15 @@ h2 {
 }
 h3 {
   border: 1px solid darkblue;
-  width: 250px;
+  width: 150px;
   background-color: beige;
+  text-align: center;
 }
 #exceeds {
   width: 400px;
+  text-align: left;
+}
+#deleteBtn {
+  width: 120px;
+  border: 1px solid red;
 }
