@@ -1,0 +1,50 @@
+h1 {
+  background-color: antiquewhite;
+  text-align: center;
+}
+table {
+  border: 1px solid black;
+  margin-right: 0;
+  padding: 1000;
+  width: 700px;
+}
+th {
+  border: 1px solid black;
+  background-color: gray;
+}
+td {
+  border: 1px solid black;
+  font-style: oblique;
+}
+form {
+  display: inline-block;
+}
+input {
+  width: 120px;
+  border: 1px solid blue;
+}
+#addItemButton {
+  float: right;
+  margin-right: 60px;
+  border: 1px solid red;
+  width: 130px;
+  height: 25px;
+  margin-top: 1em;
+}
+
+body {
+  background-color: darkseagreen;
+}
+h2 {
+  border: 1px solid darkblue;
+  width: 250px;
+  background-color: beige;
+}
+h3 {
+  border: 1px solid darkblue;
+  width: 250px;
+  background-color: beige;
+}
+#exceeds {
+  width: 400px;
+}

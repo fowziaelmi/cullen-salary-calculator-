@@ -33,8 +33,15 @@ v. Employee monthly salary
 
 - Store the input into an array.
   [X] Render all the employee information
-  [ ] Calculate total monthly cost and append it to the DOM
+  [X] Calculate total monthly cost and append it to the DOM
 
-[ ] Add a delete button to delete each employee information onto the DOM
+[X] Add a delete button to delete each employee information onto the DOM
+
+- Calculate total monthly cost
+
+[x] Find the sum of the annual salary of all the employees and divide by 12.
+[x] Append the monthly cost to the DOM
+
+[x]Turn the background color of the total monthly cost red if it exceeds 20000.
 
 \*\*

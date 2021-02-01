@@ -69,14 +69,14 @@ function sumMonthlyCost(anArray) {
   let up = $('#totalCost');
   up.empty(total);
   up.append(total);
-
+  // Turn background of the total monthly cost to red when exceeds 20000
   if (total > 20000) {
     $('#exceeds').css('background-color', 'red');
   } else {
     console.log('we are good');
   }
 }
-
+// Display all the inputs on the DOM
 function displayInDom() {
   console.log('in display');
 
