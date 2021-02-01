@@ -10,6 +10,20 @@ This application will allow user to input and store each employee's information 
 -jQuery
 -HTML/CSS
 
+## Usage
+
+- Application allows user to collect, track, and store employee information
+- Application allows user to track and calculate total monthly cost using the annual salary of the employees.
+- Application allows user to see when they have exceeded the total monthly cost for salaries.
+
+## Acknowledgments
+
+Thanks to Prime Digital Academy who equipped and helped me to make this application a reality.
+
+## Support
+
+If you have suggestions or issues, please email me at fowziiae@gmail.com
+
 ## TODO List
 
 Goal:
